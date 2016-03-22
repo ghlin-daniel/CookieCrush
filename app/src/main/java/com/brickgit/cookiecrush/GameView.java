@@ -119,10 +119,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 	}
 
 	private void drawCookies() {
-		List<Cookie> cookies = level.getListCookies();
-
 		Canvas canvas = holder.lockCanvas();
+		if (canvas == null) return;
+
 		canvas.drawColor(0, PorterDuff.Mode.CLEAR);
+
+		List<Cookie> cookies = level.getListCookies();
 		for (Cookie cookie : cookies) {
 			Bitmap bitmap = getBitmap(cookie);
 			Point point = getPoint(cookie);
@@ -283,6 +285,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
 	private void drawSwapes(float percent, List<Swap> swaps) {
 		Canvas canvas = holder.lockCanvas();
+		if (canvas == null) return;
+
 		canvas.drawColor(0, PorterDuff.Mode.CLEAR);
 		List<Cookie> cookies = level.getListCookies();
 		for (Cookie cookie : cookies) {
