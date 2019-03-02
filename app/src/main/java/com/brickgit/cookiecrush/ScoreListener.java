@@ -1,5 +1,5 @@
 package com.brickgit.cookiecrush;
 
 public interface ScoreListener {
-	void onScore(int score);
+  void onScore(int score);
 }
