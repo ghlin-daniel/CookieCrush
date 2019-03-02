@@ -2,13 +2,14 @@ package com.brickgit.cookiecrush;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+
+import androidx.appcompat.app.AlertDialog;
 
 public class AppDialog {
 
 	public static AlertDialog getStartMenu(Context context,
-	                            DialogInterface.OnClickListener startListener,
-	                            DialogInterface.OnClickListener exitListener) {
+																				 DialogInterface.OnClickListener startListener,
+																				 DialogInterface.OnClickListener exitListener) {
 		int highestScore = AppPreference.getHighestScore(context);
 		String scoreMessage = String.format(context.getResources().getString(R.string.highest_score), highestScore);
 
@@ -21,8 +22,8 @@ public class AppDialog {
 	}
 
 	public static AlertDialog getPauseMenu(Context context,
-	                             DialogInterface.OnClickListener resumeListener,
-	                             DialogInterface.OnClickListener exitListener) {
+																				 DialogInterface.OnClickListener resumeListener,
+																				 DialogInterface.OnClickListener exitListener) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(context);
 		builder.setCancelable(false);
 		builder.setTitle(R.string.pause);

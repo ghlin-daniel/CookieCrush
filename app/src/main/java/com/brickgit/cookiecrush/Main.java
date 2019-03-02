@@ -2,12 +2,13 @@ package com.brickgit.cookiecrush;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Main extends AppCompatActivity {
 
